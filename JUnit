@@ -1,0 +1,4 @@
+# JUnit & Unit testing
+Unit testing tests each method for a specific class. And JUnit is a framework that does unit testing, 
+it allows us to test if each method return the correct result. And it is automated.
+
