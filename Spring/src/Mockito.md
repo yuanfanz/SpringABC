@@ -1,17 +1,18 @@
-Stub needs lots of code to maintain the test functioning. Mockito can create mocks which will require less for unit testing.
+- Stub needs lots of code to maintain the test functioning. Mockito can create mocks which will require less for unit testing.
 
-implementation: 
-  SomeService someServiceMock = mock(SomeService.class);
-  someServiceMock.retrieveAllData() => new int[] {2,4,15,77}
-  when(someServiceMock.retrieveAllData()).thenReturn(new int[]{2,4,15,77});
-  someBusinessImpl businessImpl = new SomeBusinessImpl(someServiceMock);
+- implementation: 
+    - SomeService someServiceMock = mock(SomeService.class);
+    - someServiceMock.retrieveAllData() => new int[] {2,4,15,77}
+    - when(someServiceMock.retrieveAllData()).thenReturn(new int[]{2,4,15,77});
+    - someBusinessImpl businessImpl = new SomeBusinessImpl(someServiceMock);
   
-  int result = businessImpl.findTheGreatestFromAllData();
+- int result = businessImpl.findTheGreatestFromAllData();
   assertEquals(77, result);
   
 Can create multiple tests with Mockito.
 
-Mockito annotations:
+- Mockito annotations:
+  ```
   @Mock
   SomeService someServiceMock;
   @InjectMocks
@@ -25,9 +26,10 @@ Mockito annotations:
       when(someServiceMock.retrieveAllData()).thenReturn(new int[]{2,4,15,77});
       assertEquals(77, businessImpl.findTheGreatestFromAllData(););
   }
+  ```
 
-Mocking List Interface
-
+- Mocking List Interface
+    ```
   @Test
   public void test() {
       List listMock = mock(List.class);
@@ -50,5 +52,6 @@ Mocking List Interface
       assertEquals("SomeString", listMock.get(0));
       assertEquals(null, listMock.get(1));
   }
+  ```
   
   
