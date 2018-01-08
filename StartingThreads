@@ -1,0 +1,9 @@
+- class Runner extends Thread {}
+- Runner runner1 = new Runner();
+- runner1.start();
+
+- class RunnerRunnable implements Runnable {}
+- Thread thread1 = new Thread(new RunnerRunnable());
+- thread1.start();
+
+- OR Anonymous class
