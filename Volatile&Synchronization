@@ -1,0 +1,20 @@
+- $volatile$ keyword does not make much difference in original program. 
+- But it gurantee the program to operate on all platforms.
+
+- It's used to prevent threads caching variables when they are not changed from within that thread.
+
+- Either use volatile OR use some kind of thread synchronization.
+
+- #Synchronization
+
+start() always returns immediately because it spawns an extra thread.
+
+join() will return when the thread is finished.
+
+public synchronized void increment() {
+    count++;
+}
+
+Every object in Java has an intrinsic lock or a monitor lock.
+If you call a mthod with synchronized keyword, you have to acquire the intrinsic lock before you can call.
+Only ONE thread can acquire the lock at one time. Other threads will wait until the thread finish and release.
